@@ -17,14 +17,24 @@ struct ContentView: View {
         "\(mainCurrency) exchange rates for \(data.date)"
     }
     
+    func refresh() {
+        state = .loading
+        api.getData(currency: mainCurrency) { result in
+            switch result {
+            case .success(let data): state = .data(data: data)
+            case .failure(let description): state = .error(description: description)
+            }
+        }
+    }
+    
     var body: some View {
         MyNavigation {
             switch state {
-            case .loading: Text("Loading...")
+            case .loading: Text("Loading...").padding()
             case .error(let description): VStack {
                 Text("Error happened :(((")
                 Text(description)
-            }
+            }.padding()
             case .data(let data): List {
                 Section(sectionTitle(data: data)) {
                     ForEach(data.exchange, id: \.name) { exchange in
@@ -33,6 +43,11 @@ struct ContentView: View {
                             Spacer()
                             Text("\(exchange.coefficient)")
                         }
+                        .contentShape(Rectangle())
+                        .onTapGesture {
+                            mainCurrency = exchange.name
+                            refresh()
+                        }
                     }
                 }
             }.navigationTitle("Currency App")
@@ -40,12 +55,7 @@ struct ContentView: View {
             }
         }
         .onAppear {
-            api.getData(currency: mainCurrency) { result in
-                switch result {
-                case .success(let data): state = .data(data: data)
-                case .failure(let description): state = .error(description: description)
-                }
-            }
+            refresh()
         }
     }
 }
