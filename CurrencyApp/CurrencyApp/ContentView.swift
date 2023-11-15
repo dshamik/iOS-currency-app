@@ -15,14 +15,14 @@ struct ContentView: View {
     let storage = Storage()
     
     func sectionTitle(data: ExchangeData) -> String {
-        "\(mainCurrency) exchange rates for \(data.date)"
+        "\(mainCurrency) \(NSLocalizedString("subtitle", comment: "")) \(data.date)"
     }
     
     func refresh() {
         state = .loading
         api.getData(currency: mainCurrency) { result in
             switch result {
-            case .success(let data): 
+            case .success(let data):
                 state = .data(data: data)
                 storage.save(currency: mainCurrency)
             case .failure(let description): 
@@ -54,7 +54,11 @@ struct ContentView: View {
                         }
                     }
                 }
-            }.navigationTitle("Currency App")
+            }.navigationTitle("Currency App").toolbar {
+                Button("Refresh") {
+                    refresh()
+                }
+            }
                 
             }
         }

@@ -14,6 +14,7 @@
 		27BC42A72B05037B00C6A3AB /* Api.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27BC42A62B05037B00C6A3AB /* Api.swift */; };
 		27BC42A92B0508FF00C6A3AB /* ScreenState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27BC42A82B0508FF00C6A3AB /* ScreenState.swift */; };
 		27BC42AB2B0512B900C6A3AB /* Storage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27BC42AA2B0512B900C6A3AB /* Storage.swift */; };
+		27BC42AD2B0515C100C6A3AB /* Localizable.xcstrings in Resources */ = {isa = PBXBuildFile; fileRef = 27BC42AC2B0515C100C6A3AB /* Localizable.xcstrings */; };
 		4973A0C3C234F963E5B39BDC /* Pods_CurrencyApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 33B226985BFDA4B1DD936302 /* Pods_CurrencyApp.framework */; };
 /* End PBXBuildFile section */
 
@@ -27,6 +28,7 @@
 		27BC42A62B05037B00C6A3AB /* Api.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Api.swift; sourceTree = "<group>"; };
 		27BC42A82B0508FF00C6A3AB /* ScreenState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScreenState.swift; sourceTree = "<group>"; };
 		27BC42AA2B0512B900C6A3AB /* Storage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Storage.swift; sourceTree = "<group>"; };
+		27BC42AC2B0515C100C6A3AB /* Localizable.xcstrings */ = {isa = PBXFileReference; lastKnownFileType = text.json.xcstrings; path = Localizable.xcstrings; sourceTree = "<group>"; };
 		33B226985BFDA4B1DD936302 /* Pods_CurrencyApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CurrencyApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		8374B29D4D72C65779F6D458 /* Pods-CurrencyApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CurrencyApp.debug.xcconfig"; path = "Target Support Files/Pods-CurrencyApp/Pods-CurrencyApp.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -66,6 +68,7 @@
 			children = (
 				27BC42982B04FE0F00C6A3AB /* CurrencyAppApp.swift */,
 				27BC429A2B04FE0F00C6A3AB /* ContentView.swift */,
+				27BC42AC2B0515C100C6A3AB /* Localizable.xcstrings */,
 				27BC429C2B04FE1400C6A3AB /* Assets.xcassets */,
 				27BC429E2B04FE1400C6A3AB /* Preview Content */,
 				27BC42A62B05037B00C6A3AB /* Api.swift */,
@@ -144,6 +147,7 @@
 			knownRegions = (
 				en,
 				Base,
+				ru,
 			);
 			mainGroup = 27BC428C2B04FE0F00C6A3AB;
 			productRefGroup = 27BC42962B04FE0F00C6A3AB /* Products */;
@@ -162,6 +166,7 @@
 			files = (
 				27BC42A02B04FE1400C6A3AB /* Preview Assets.xcassets in Resources */,
 				27BC429D2B04FE1400C6A3AB /* Assets.xcassets in Resources */,
+				27BC42AD2B0515C100C6A3AB /* Localizable.xcstrings in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
