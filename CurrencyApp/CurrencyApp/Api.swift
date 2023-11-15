@@ -9,6 +9,11 @@ import Foundation
 import Alamofire
 import SwiftyJSON
 
+enum ScreenExchangeData {
+    case success(data: ExchangeData)
+    case failure(description: String)
+}
+
 struct ExchangeData {
     let date: String
     let exchange: [CurrencyData]
@@ -24,7 +29,7 @@ class Api {
         "https://cdn.jsdelivr.net/gh/fawazahmed0/currency-api@1/latest/currencies/\(currency).json"
     }
     
-    func getData(currency: String) {
+    func getData(currency: String, completion: @escaping (ScreenExchangeData) -> Void) {
         AF.request(path(currency: currency)).response(completionHandler: { result in
             switch result.result {
             case let .success(rawData):
@@ -34,13 +39,15 @@ class Api {
                     CurrencyData(name: k, coefficient: v.doubleValue)
                 }
                 if date != nil && exchange != nil {
-                    print(ExchangeData(date: date!, exchange: exchange!))
+                    completion(.success(data: ExchangeData(date: date!, exchange: exchange!)))
                 } else {
                     print("Couldn't parse :(((")
+                    completion(.failure(description: "Api is wrong (or the app is wrong idk)"))
                 }
                 
             case let .failure(error):
                 print(error.errorDescription)
+                completion(.failure(description: error.errorDescription ?? "Error happened"))
             }
         })
     }
