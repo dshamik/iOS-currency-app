@@ -11,6 +11,7 @@
 		27BC429B2B04FE0F00C6A3AB /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27BC429A2B04FE0F00C6A3AB /* ContentView.swift */; };
 		27BC429D2B04FE1400C6A3AB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 27BC429C2B04FE1400C6A3AB /* Assets.xcassets */; };
 		27BC42A02B04FE1400C6A3AB /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 27BC429F2B04FE1400C6A3AB /* Preview Assets.xcassets */; };
+		27BC42A72B05037B00C6A3AB /* Api.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27BC42A62B05037B00C6A3AB /* Api.swift */; };
 		4973A0C3C234F963E5B39BDC /* Pods_CurrencyApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 33B226985BFDA4B1DD936302 /* Pods_CurrencyApp.framework */; };
 /* End PBXBuildFile section */
 
@@ -21,6 +22,7 @@
 		27BC429A2B04FE0F00C6A3AB /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		27BC429C2B04FE1400C6A3AB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		27BC429F2B04FE1400C6A3AB /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		27BC42A62B05037B00C6A3AB /* Api.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Api.swift; sourceTree = "<group>"; };
 		33B226985BFDA4B1DD936302 /* Pods_CurrencyApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CurrencyApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		8374B29D4D72C65779F6D458 /* Pods-CurrencyApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CurrencyApp.debug.xcconfig"; path = "Target Support Files/Pods-CurrencyApp/Pods-CurrencyApp.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -62,6 +64,7 @@
 				27BC429A2B04FE0F00C6A3AB /* ContentView.swift */,
 				27BC429C2B04FE1400C6A3AB /* Assets.xcassets */,
 				27BC429E2B04FE1400C6A3AB /* Preview Content */,
+				27BC42A62B05037B00C6A3AB /* Api.swift */,
 			);
 			path = CurrencyApp;
 			sourceTree = "<group>";
@@ -88,7 +91,6 @@
 				8374B29D4D72C65779F6D458 /* Pods-CurrencyApp.debug.xcconfig */,
 				13BA2FA217A9D453C3C48441 /* Pods-CurrencyApp.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -206,6 +208,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				27BC42A72B05037B00C6A3AB /* Api.swift in Sources */,
 				27BC429B2B04FE0F00C6A3AB /* ContentView.swift in Sources */,
 				27BC42992B04FE0F00C6A3AB /* CurrencyAppApp.swift in Sources */,
 			);
@@ -251,7 +254,7 @@
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
-				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				GCC_C_LANGUAGE_STANDARD = gnu17;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_NO_COMMON_BLOCKS = YES;
@@ -314,7 +317,7 @@
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				GCC_C_LANGUAGE_STANDARD = gnu17;
 				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
@@ -342,6 +345,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"CurrencyApp/Preview Content\"";
+				DEVELOPMENT_TEAM = FA363BW2ZL;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
@@ -372,6 +376,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"CurrencyApp/Preview Content\"";
+				DEVELOPMENT_TEAM = FA363BW2ZL;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
