@@ -13,6 +13,7 @@
 		27BC42A02B04FE1400C6A3AB /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 27BC429F2B04FE1400C6A3AB /* Preview Assets.xcassets */; };
 		27BC42A72B05037B00C6A3AB /* Api.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27BC42A62B05037B00C6A3AB /* Api.swift */; };
 		27BC42A92B0508FF00C6A3AB /* ScreenState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27BC42A82B0508FF00C6A3AB /* ScreenState.swift */; };
+		27BC42AB2B0512B900C6A3AB /* Storage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27BC42AA2B0512B900C6A3AB /* Storage.swift */; };
 		4973A0C3C234F963E5B39BDC /* Pods_CurrencyApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 33B226985BFDA4B1DD936302 /* Pods_CurrencyApp.framework */; };
 /* End PBXBuildFile section */
 
@@ -25,6 +26,7 @@
 		27BC429F2B04FE1400C6A3AB /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		27BC42A62B05037B00C6A3AB /* Api.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Api.swift; sourceTree = "<group>"; };
 		27BC42A82B0508FF00C6A3AB /* ScreenState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScreenState.swift; sourceTree = "<group>"; };
+		27BC42AA2B0512B900C6A3AB /* Storage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Storage.swift; sourceTree = "<group>"; };
 		33B226985BFDA4B1DD936302 /* Pods_CurrencyApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CurrencyApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		8374B29D4D72C65779F6D458 /* Pods-CurrencyApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CurrencyApp.debug.xcconfig"; path = "Target Support Files/Pods-CurrencyApp/Pods-CurrencyApp.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -68,6 +70,7 @@
 				27BC429E2B04FE1400C6A3AB /* Preview Content */,
 				27BC42A62B05037B00C6A3AB /* Api.swift */,
 				27BC42A82B0508FF00C6A3AB /* ScreenState.swift */,
+				27BC42AA2B0512B900C6A3AB /* Storage.swift */,
 			);
 			path = CurrencyApp;
 			sourceTree = "<group>";
@@ -215,6 +218,7 @@
 				27BC42A92B0508FF00C6A3AB /* ScreenState.swift in Sources */,
 				27BC429B2B04FE0F00C6A3AB /* ContentView.swift in Sources */,
 				27BC42992B04FE0F00C6A3AB /* CurrencyAppApp.swift in Sources */,
+				27BC42AB2B0512B900C6A3AB /* Storage.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

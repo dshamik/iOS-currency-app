@@ -12,6 +12,7 @@ struct ContentView: View {
     @State var mainCurrency = "usd"
     
     let api = Api()
+    let storage = Storage()
     
     func sectionTitle(data: ExchangeData) -> String {
         "\(mainCurrency) exchange rates for \(data.date)"
@@ -21,8 +22,11 @@ struct ContentView: View {
         state = .loading
         api.getData(currency: mainCurrency) { result in
             switch result {
-            case .success(let data): state = .data(data: data)
-            case .failure(let description): state = .error(description: description)
+            case .success(let data): 
+                state = .data(data: data)
+                storage.save(currency: mainCurrency)
+            case .failure(let description): 
+                state = .error(description: description)
             }
         }
     }
@@ -55,6 +59,12 @@ struct ContentView: View {
             }
         }
         .onAppear {
+            let currency = storage.load()
+            if currency == nil {
+                mainCurrency = "usd"
+            } else {
+                mainCurrency = currency!
+            }
             refresh()
         }
     }
